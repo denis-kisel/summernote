@@ -1,0 +1,37 @@
+{
+    "name": "denis-kisel/summernote",
+    "description": "Summernote with file uploader for laravel-admin",
+    "authors": [
+        {
+            "name": "Denis Kisel",
+            "email": "denis.kisel92@gmail.com",
+            "homepage": "http://digital-elephant.com.ua"
+        }
+    ],
+    "homepage": "https://github.com/denis-kisel/summernote",
+    "keywords": ["Laravel", "Summernote"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DenisKisel\\Summernote\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DenisKisel\\Summernote\\SummernoteServiceProvider"
+            ],
+            "aliases": {
+                "Summernote": "DenisKisel\\Summernote\\Facades\\Summernote"
+            }
+        }
+    }
+}
