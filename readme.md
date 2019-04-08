@@ -10,7 +10,7 @@ Via Composer
 $ composer require denis-kisel/summernote
 ```
 
-Add package service in <font color="green">config/app.php</font> file
+Add package service in the <font color="green">config/app.php</font> file
 ``` php
 /*
  * Package Service Providers...
