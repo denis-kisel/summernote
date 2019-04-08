@@ -10,6 +10,11 @@ Via Composer
 $ composer require denis-kisel/summernote
 ```
 
+Publish resources
+``` bash
+$  php artisan vendor:publish --provider="DenisKisel\\Summernote\\SummernoteServiceProvider"
+```
+
 ## Usage with laravel-admin
 Put below code in the <font color="green">app/admin/bootstrap.php</font> file
 
