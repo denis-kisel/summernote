@@ -1,10 +1,5 @@
 # Summernote
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
-
 Summernote for laravel-admin with image uploader
 
 ## Installation
@@ -12,7 +7,7 @@ Summernote for laravel-admin with image uploader
 Via Composer
 
 ``` bash
-$ composer require deniskisel/summernote
+$ composer require denis-kisel/summernote
 ```
 
 ## Usage with laravel-admin
