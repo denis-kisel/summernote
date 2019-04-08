@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Summernote for laravel-admin with image uploader
 
 ## Installation
 
@@ -15,43 +15,23 @@ Via Composer
 $ composer require deniskisel/summernote
 ```
 
-## Usage
+## Usage with laravel-admin
+Put below code in the <font color="green">app/admin/bootstrap.php</font> file
 
-## Change log
-
-Please see the [changelog](changelog.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
+``` php
+Encore\Admin\Form::extend('summernote', DenisKisel\Summernote\Summernote::class);
 ```
 
-## Contributing
+Add csrf exception in the <font color="green">app/http/middleware/VerifyCsrfToken.php</font> file
 
-Please see [contributing.md](contributing.md) for details and a todolist.
 
-## Security
+``` php
+protected $except = [
+        '/admin/ajax/uploader'
+    ];
+```
 
-If you discover any security related issues, please email denis.kisel92@gmail.com instead of using the issue tracker.
-
-## Credits
-
-- [Denis Kisel][link-author]
-- [All Contributors][link-contributors]
-
-## License
-
-MID. Please see the [license file](license.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/deniskisel/summernote.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/deniskisel/summernote.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/deniskisel/summernote/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
-
-[link-packagist]: https://packagist.org/packages/deniskisel/summernote
-[link-downloads]: https://packagist.org/packages/deniskisel/summernote
-[link-travis]: https://travis-ci.org/deniskisel/summernote
-[link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/deniskisel
-[link-contributors]: ../../contributors
+Use in the laravel-admin controller files
+``` php
+$form->summernote('description', 'Description');
+```
