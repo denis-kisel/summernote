@@ -10,6 +10,15 @@ Via Composer
 $ composer require denis-kisel/summernote
 ```
 
+Add package service to app config <font color="green">config/app.php</font> file
+``` php
+/*
+ * Package Service Providers...
+ */
+DenisKisel\Summernote\SummernoteServiceProvider::class,
+```
+
+
 Publish resources
 ``` bash
 $  php artisan vendor:publish --provider="DenisKisel\\Summernote\\SummernoteServiceProvider"
@@ -27,8 +36,8 @@ Add csrf exception in the <font color="green">app/http/middleware/VerifyCsrfToke
 
 ``` php
 protected $except = [
-        '/admin/ajax/uploader'
-    ];
+    '/admin/ajax/uploader'
+];
 ```
 
 Use in the laravel-admin controller files
