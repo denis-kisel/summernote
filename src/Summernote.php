@@ -21,7 +21,6 @@ class Summernote extends Field
         $this->script = "
                 $('.summernote').summernote({
                     height: 400,
-                    width: 1192,
                     callbacks: {
                         onImageUpload: function(image) {
                             uploadImage(image[0], this);
