@@ -11,7 +11,7 @@
     "homepage": "https://github.com/denis-kisel/summernote",
     "keywords": ["Laravel", "Summernote"],
     "require": {
-        "illuminate/support": "~6"
+        "illuminate/support": "*"
     },
     "autoload": {
         "psr-4": {
