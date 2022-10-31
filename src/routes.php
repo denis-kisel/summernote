@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Routing\Router;
-
-app('router')->namespace('DenisKisel\Summernote\Controllers')->group(function ($router) {
-    $router->post('/admin/ajax/uploader', 'Uploader@store');
+Route::group([
+    'namespace'     => 'DenisKisel\Summernote\Controllers',
+    'middleware'    => config('admin.route.middleware'),
+], function (Router $router) {
+        $router->post('/summernote/media', 'Uploader@store');
 });

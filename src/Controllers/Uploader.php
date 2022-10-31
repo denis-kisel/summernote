@@ -8,9 +8,9 @@ class Uploader
     public function store(Request $request)
     {
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('public/media');
+            $path = $request->file('image')->store('public/summernote/media');
             $fileName = pathinfo($path, PATHINFO_FILENAME) . '.' . pathinfo($path, PATHINFO_EXTENSION);
-            return response(url('/storage/media/' . $fileName), 200);
+            return response(url('/storage/summernote/media/' . $fileName), 200);
         } else {
             return response()->json($request->allFiles());
         }

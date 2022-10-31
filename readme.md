@@ -36,7 +36,7 @@ Add csrf exception in the <font color="green">app/http/middleware/VerifyCsrfToke
 
 ``` php
 protected $except = [
-    '/admin/ajax/uploader'
+    '/summernote/media'
 ];
 ```
 

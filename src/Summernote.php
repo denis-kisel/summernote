@@ -27,12 +27,12 @@ class Summernote extends Field
                         }
                     }
                 });
-                
+
                 function uploadImage(image, currentEditor) {
                     var data = new FormData();
                     data.append(\"image\", image);
                     $.ajax({
-                        url: '/admin/ajax/uploader',
+                        url: '/summernote/media',
                         cache: false,
                         contentType: false,
                         processData: false,
