@@ -12,6 +12,7 @@ class Summernote extends Field
 
     public static $css = [
         '/vendor/deniskisel/bower_components/summernote/dist/summernote-bs4.css',
+        '/vendor/deniskisel/style.css',
     ];
 
     protected $view = 'dksummernote::summernote';
