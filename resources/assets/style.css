@@ -2,6 +2,6 @@
     padding: 30px;
 }
 
-.note-editor .close {
+.note-editor .modal-header .close {
     margin-top: -20px;
 }
